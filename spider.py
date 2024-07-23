@@ -2,6 +2,7 @@ from urllib.request import *
 from link_finder import LinkFinder
 from general import *
 from domain import *
+from config import *
 
 class Spider:
 
@@ -36,7 +37,7 @@ class Spider:
     @staticmethod
     def crawl_page(thread_name,page_url):
         if page_url not in Spider.crawled:
-            print(thread_name+'now crawling'+page_url)
+            print(thread_name+' now crawling '+page_url)
             print('Queue: '+ str(len(Spider.queue))+ '| Crawled: ' + str(len(Spider.crawled)))
 
             Spider.add_links_to_queue(Spider.gather_links(page_url))
@@ -51,7 +52,8 @@ class Spider:
     def gather_links(page_url):
         html_string=''
         try:
-            response=urlopen(page_url)
+            request = Request(url=page_url,headers=extra_headers )
+            response=urlopen(request)
             if 'text/html' in response.getheader('Content-Type'):
                 html_bytes=response.read()
                 html_string=html_bytes.decode('utf-8')

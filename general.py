@@ -38,7 +38,6 @@ def file_to_set(filename):
 
 
 def set_to_file(links,file):
-    # delete_file_contents(file)
     with open(file,'w') as f:
         for link in sorted(links):
             f.write(link+'\n')

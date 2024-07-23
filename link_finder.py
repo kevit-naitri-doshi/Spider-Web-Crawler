@@ -19,7 +19,6 @@ class LinkFinder(HTMLParser):
     
     
     def page_links(self):
-        return self.links                       
-    def error(self,message):
-        pass
+        return self.links
+                           
 
