@@ -74,6 +74,8 @@ class Spider:
                 continue
             if Spider.domain_name not in url:
                 continue
+            if any(substring in url for substring in urls_to_be_removed):
+                continue
             Spider.queue.add(url)
     
     @staticmethod

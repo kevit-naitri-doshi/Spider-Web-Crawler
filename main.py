@@ -4,6 +4,7 @@ from spider import Spider
 from domain import *
 from general import *
 from config import *
+import time
 
 queue=Queue()
 Spider(PROJECT_NAME,HOMEPAGE,DOMAIN_NAME)
@@ -32,5 +33,9 @@ def crawl():
         print(str(len(queued_links))+ 'links in the queue')
         create_jobs()
 
+start_time=time.time()
 create_workers()
 crawl()
+end_time=time.time()
+
+print("TIME TAKEN: ",end_time-start_time)

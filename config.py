@@ -28,3 +28,4 @@ extra_headers = {
     }
 
 path='/home/kevit/Downloads/chromedriver-linux64/chromedriver'
+urls_to_be_removed=['jpg', 'png', 'pdf', 'comment', 'post','respond','page','jpeg','#','addtoany','facebook','youtube','amazon','pinterest','instagram']
