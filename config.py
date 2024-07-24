@@ -1,8 +1,10 @@
 from domain import *
 
-PROJECT_NAME='ranveerbrar'
+# PROJECT_NAME='ranveerbrar'
+PROJECT_NAME='sanjaykitchen'
 
-HOMEPAGE= 'https://ranveerbrar.com/'
+# HOMEPAGE= 'https://ranveerbrar.com/'
+HOMEPAGE= 'https://sanjaykitchen.com/'
 
 DOMAIN_NAME=get_domain_name(HOMEPAGE)
 QUEUE_FILE=PROJECT_NAME + '/queue.txt'
@@ -28,4 +30,4 @@ extra_headers = {
     }
 
 path='/home/kevit/Downloads/chromedriver-linux64/chromedriver'
-urls_to_be_removed=['jpg', 'png', 'pdf', 'comment', 'post','respond','page','jpeg','#','addtoany','facebook','youtube','amazon','pinterest','instagram']
+urls_to_be_removed=['jpg', 'png', 'pdf', 'comment', 'post','respond','page','jpeg','#','addtoany','facebook','youtube','amazon','pinterest','instagram','whatsapp','img','image','gallery']
