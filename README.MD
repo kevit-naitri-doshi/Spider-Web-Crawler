@@ -43,7 +43,7 @@ NUMBER_OF_THREADS = 8
    Clone the repository to your local machine.
 
    ```bash
-   git clone https://github.com/kevit-naitri-doshi/Spider-Web-Crawler.git
+   git clone https://github.com/naitridoshi/Spider-Web-Crawler.git
    ```
 
 2. **Configure the Parameters**
